@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    font-family: "Google Sans", sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(to bottom, #2c2438,#171717);
+    background-attachment: fixed;
+    color: #ccc2d4;
+}
+
+.container {
+    padding: 55px;
+
+}
+
+.header{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.header i{
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.header textarea {
+    background: transparent;
+    color: #dddddd;
+    font-size: 16px;
+    font-weight: bold;
+    height: 20px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.9s;
+}
+
+.header textarea:hover{
+    border-bottom: 1px solid #595959;
+    box-shadow: 0 3px 30px -15px #595959;
+}
+
+.header textarea::placeholder{
+    color: #acacac;
+}
+
+.notes-content{
+    padding: 5px;
+}
+
+.notes-content textarea{
+    background: transparent;
+    color: #ccc2d4;;
+    font-size: 16px;
+
+    min-height: 65vh;
+    height: 100%;
+    width: 95%;
+    line-height: 1.6;
+    letter-spacing: 0.8px;
+    padding-left: 40px;
+
+    hyphens: auto;
+    word-wrap: break-word;
+
+    resize: none;
+    overflow: hidden;
+    border: none;
+    outline: none;
+}
+
+.notes-content textarea::placeholder{
+    color: #dddddd;
+}
+
+footer{
+    color:#595959;
+    font-size: 12px;
+    justify-self: center;
+    padding-bottom: 5px;
+    transition: 0.9s;
+}
+
+footer:hover{
+    color: #e1b4ff;
+}
