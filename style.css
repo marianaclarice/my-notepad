@@ -1,22 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-*{
-    font-family: "Google Sans", sans-serif;
+*{ font-family: "Google Sans", sans-serif; }
+
+/* Paleta */
+:root{
+    --bg-gradient: linear-gradient(to bottom, #2c2438, #171717);
+    --text-main: #eee4f6;
+    --text-bold: #ddd;
+    --text-placeholder: #acacac;
+    --border-hover: #595959;
+    --footer-color: #595959;
+    --footer-hover: #e1b4ff;
 }
 
-html{
-    height: 100%;
+.light-mode{
+    --bg-gradient: linear-gradient(135deg, #fefefe 10%, #c090bc 100%);
+    --text-main: #000;
+    --text-bold: #200025;
+    --text-placeholder: #595959;
+    --border-hover: #a78ba6;
+    --footer-color: #614261;
+    --footer-hover: #9d3b9d;
 }
+
+html{ height: 100%; }
 
 body{
-    background: linear-gradient(to bottom, #2c2438,#171717);
+    background: var(--bg-gradient);
     background-attachment: fixed;
-    color: #ccc2d4;
+    color: var(--text-main);
 }
 
 .container {
     padding: 55px;
-
 }
 
 .header{
@@ -25,14 +41,19 @@ body{
     margin-bottom: 20px;
 }
 
-.header i{
+#theme-toggle{
     padding-top: 20px;
     cursor: pointer;
+    transition: transform 1s cubic-bezier(0.4,0,0.2,1), color 0.5s ease;
+    display: inline-block;
+}.light-mode #theme-toggle{
+    transform: rotate(360deg);
+    color: #832d91;
 }
 
 .header textarea {
     background: transparent;
-    color: #dddddd;
+    color: var(--text-bold);
     font-size: 16px;
     font-weight: bold;
     height: 20px;
@@ -48,12 +69,12 @@ body{
 }
 
 .header textarea:hover{
-    border-bottom: 1px solid #595959;
-    box-shadow: 0 3px 30px -15px #595959;
+    border-bottom: 1px solid var(--border-hover);
+    box-shadow: 0 3px 30px -15px var(--border-hover);
 }
 
 .header textarea::placeholder{
-    color: #acacac;
+    color: var(--text-placeholder);
 }
 
 .notes-content{
@@ -62,7 +83,7 @@ body{
 
 .notes-content textarea{
     background: transparent;
-    color: #ccc2d4;;
+    color: var(--text-main);
     font-size: 16px;
 
     min-height: 65vh;
@@ -82,11 +103,11 @@ body{
 }
 
 .notes-content textarea::placeholder{
-    color: #dddddd;
+    color: var(--text-placeholder);
 }
 
 footer{
-    color:#595959;
+    color: var(--footer-color);
     font-size: 12px;
     justify-self: center;
     padding-bottom: 5px;
@@ -94,5 +115,5 @@ footer{
 }
 
 footer:hover{
-    color: #e1b4ff;
+    color: var(--footer-hover);
 }
